@@ -102,10 +102,10 @@ class BasePlusCommissionEmployee(CommissionEmployee):
         return self.get_base_salary() + super().earnings()
 
 
-# --- Δημιουργία αντικειμένων ---
+
 e = SalariedEmployee("John", "Smith", "111-11-1111", 800.00)
 h = HourlyEmployee("Karen", "Price", "222-22-2222", 16.75, 40)
-c = CommissionEmployee("Sue", "Jones", "333-33-3333", 10000, 0.06)  # διόρθωσα 0.6 σε 0.06 (πιο ρεαλιστικό)
+c = CommissionEmployee("Sue", "Jones", "333-33-3333", 10000, 0.06)  
 b = BasePlusCommissionEmployee("Bob", "Lewis", "444-44-4444", 5000, 0.04, 300)
 
 print("Salaried Employee")
@@ -121,7 +121,6 @@ print("\nBase Plus Commission Employee")
 print(b.earnings())
 
 print("\nTable elements")
-table = [e, h, c, b]          # πρόσθεσα και το c
-
+table = [e, h, c, b]       
 for emp in table:
     print(emp.earnings())
